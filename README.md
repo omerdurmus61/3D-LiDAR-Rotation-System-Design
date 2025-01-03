@@ -6,7 +6,7 @@
 4. [Installation](#installation)
 5. [Usage](#usage)
 6. [Visualization](#visualization)
-7. [Acknowledgments](#acknowledgments)
+7. [Results](#results)
 8. [Contact](#contact)
 
    
@@ -56,12 +56,23 @@ source devel/setup.bash
 
 ## Usage
 This setup represents a complete pipeline for the 3D LiDAR rotation system. By running these launch files together, the system integrates servo control, IMU data fusion, LiDAR scanning, and visualization, creating a functional and real-time 3D mapping platform.
-
+   
 1. imu_gps_servo.launch handles servo control, IMU and GPS data via rosserial.
+```bash
+roslaunch lidar_rotation imu_gps_servo.launch
+```
 2. tf_imu_lidar.launch manages the frame transformations.
+```bash
+roslaunch lidar_rotation tf_imu_lidar.launch
+```
 3. visualization.launch provides custom Rviz setup for monitoring the system in real-time using markers and PointCloud.
+```bash
+roslaunch lidar_rotation visualization.launch
+```
 4. sick_mrs_1xxx.launch handles raw LiDAR data collection and streaming.
- 
+```bash
+roslaunch sick_scan sick_mrs_1xxx.launch
+```
 For more details or to download the official SICK drivers, visit the [sic_scan](https://github.com/SICKAG/sick_scan) and [sic_scan_xd](https://github.com/SICKAG/sick_scan_xd) repositories.
 
 | ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/terminal_setup.png) | 
@@ -70,13 +81,14 @@ For more details or to download the official SICK drivers, visit the [sic_scan](
 
 
 ## Visualization
-Tools and methods for visualizing the collected point cloud data.
-
-## Acknowledgments
-Credits to contributors and tools used in this project.
+| ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/gif0.gif) | ![LiDAR in Action](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/gif1.gif) |
+|------------------------------------|------------------------------------|
+| ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/gif3.gif) | ![LiDAR in Action](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/gif4.gif) |
+## Results
+| ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/face.png) | ![LiDAR in Action](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/indoor.png) |
+|------------------------------------|------------------------------------|
+| ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/segmantation.png) | ![LiDAR in Action](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/human.png) |
 
 ## Contact
 For any questions or feedback, please contact:
-- Name: [Your Name]
-- Email: [Your Email]
-- GitHub: [Your GitHub Profile]
+- Email: [omercandurmuss@gmail.com]
