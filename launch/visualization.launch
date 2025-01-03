@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="lidar_rotation" type="LIDAR_marker" name="LIDAR_marker" output="screen" />
+    <node pkg="lidar_rotation" type="platform_marker" name="platform_marker" output="screen" />
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find lidar_rotation)/config/rviz_lidar_rotation.rviz" />
+
+</launch>

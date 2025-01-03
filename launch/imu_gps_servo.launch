@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="rosserial_python" type="serial_node.py" name="mcu_imu_gps_servo" output="screen">
+    <param name ="~port" value="/dev/ttyUSB2"/>
+    <param name ="~baud" value="256000"/>
+    </node>
+</launch>
+
