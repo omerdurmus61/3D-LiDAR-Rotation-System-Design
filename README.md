@@ -75,6 +75,19 @@ roslaunch sick_scan sick_mrs_1xxx.launch
 ```
 For more details or to download the official SICK drivers, visit the [sic_scan](https://github.com/SICKAG/sick_scan) and [sic_scan_xd](https://github.com/SICKAG/sick_scan_xd) repositories.
 
+Bag File
+
+This project includes a ROS bag file containing recorded data from the LiDAR rotation system. The bag file provides synchronized 3D point cloud data and servo motor position information, which can be used to analyze and visualize the LiDAR's performance in capturing the environment. By replaying this bag file in a ROS environment, users can simulate the system's functionality and test algorithms for 3D mapping, environment perception, and data processing without requiring the physical setup. This allows for a better understanding of the LiDAR's rotational capabilities and its application in real-world scenarios.
+
+Use rosbag terminal tool to replaying the bag file
+```bash
+rosbag play tf_transformation_visualization.bag 
+```
+Using visualization launch file you can visualize movements and sensor readings
+```bash
+roslaunch lidar_rotation visualization.launch
+```
+
 | ![LiDAR System](https://github.com/omerdurmus61/3D-LiDAR-Rotation-System-Design/blob/master/images/terminal_setup.png) | 
 |------------------------------------|
 | Terminal Setup                     |
